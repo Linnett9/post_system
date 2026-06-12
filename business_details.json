@@ -1,0 +1,34 @@
+{
+  "business": {
+    "name": "Deelicous Eats",
+    "type": "Breakfast cafe, takeaway, burger & comfort food specialist",
+    "location": "Harrowbrook Industrial Estate, Hinckley",
+    "opening_times": {
+      "weekdays": "9am-2pm",
+      "weekends": "Closed"
+    },
+    "platforms": ["Just Eat", "Uber Eats", "Deliveroo"]
+  },
+
+  "contact": {
+    "phone": "07492486118",
+    "email": "deewelch@hotmail.co.uk",
+    "booking_note": "Available for event bookings, pre-orders and catering enquiries"
+  },
+
+  "offers": [
+    {
+      "name": "Tuesday Just Eat Discount",
+      "description": "20% off all Just Eat orders every Tuesday"
+    },
+    {
+      "name": "Loyalty Stamp Card",
+      "description": "Average £10 off every 6th order using stamp card"
+    }
+  ],
+
+  "trust": {
+    "reviews": "5-star rated across Just Eat, Uber Eats and Deliveroo",
+    "hygiene": "5-star food hygiene rating"
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "menu": {
+    "breakfast": [
+      {
+        "name": "Large Full English Breakfast",
+        "description": "3 bacon, 3 sausage, 2 eggs, 2 black pudding, 2 mushrooms, 2 plum tomatoes, 2 beans, 2 hash browns & 2 toast",
+        "tags": ["breakfast", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "Full English Breakfast",
+        "description": "2 bacon, 2 sausage, egg, black pudding, mushrooms, tomatoes, beans, hash browns & toast",
+        "tags": ["breakfast"],
+        "tier": 2
+      },
+      {
+        "name": "Classic Breakfast",
+        "description": "Bacon, sausage, egg, beans, hash brown & toast",
+        "tags": ["breakfast"],
+        "tier": 2
+      },
+      {
+        "name": "Medium Classic Breakfast",
+        "description": "2 bacon, 2 sausage, egg, beans, hash brown & 2 toast",
+        "tags": ["breakfast"],
+        "tier": 2
+      },
+      {
+        "name": "Large Classic Breakfast",
+        "description": "3 bacon, 3 sausage, 2 eggs, 2 beans, 2 hash browns & 2 toast",
+        "tags": ["breakfast"],
+        "tier": 2
+      },
+      {
+        "name": "Breakfast Wrap",
+        "description": "2 bacon, 2 sausage, 2 hash browns, egg & cheese",
+        "tags": ["breakfast", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "Fully Loaded Baguette",
+        "description": "2 bacon, 2 sausage, 2 eggs, black pudding, mushroom, onions & cheese",
+        "tags": ["breakfast", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "The Best Baguette",
+        "description": "2 bacon, 2 sausage, 2 eggs, tomatoes or beans",
+        "tags": ["breakfast", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "The Triple Stack Toastie",
+        "description": "2 bacon, 2 sausage, 2 eggs, cheese & hash brown",
+        "tags": ["breakfast"],
+        "tier": 2
+      },
+      {
+        "name": "Maple Bacon Bagel",
+        "description": "bagel, cream cheese, maple bacon & rocket",
+        "tags": ["breakfast"],
+        "tier": 3
+      },
+      {
+        "name": "Smashed Bacon Avocado Bagel",
+        "description": "bagel, avocado, smoked bacon & fried egg",
+        "tags": ["breakfast"],
+        "tier": 3
+      },
+      {
+        "name": "Loaded Hash Browns",
+        "description": "3 hash browns, cheese & beans",
+        "tags": ["breakfast"],
+        "tier": 3
+      }
+    ],
+
+    "hot_fillings": [
+      {
+        "name": "Bacon Hot Filling",
+        "description": "Bacon with choice of bread (sandwich, toast, baguette, cob)",
+        "tags": ["hot_filling"],
+        "tier": 2
+      },
+      {
+        "name": "Sausage Hot Filling",
+        "description": "Sausage with choice of bread",
+        "tags": ["hot_filling"],
+        "tier": 2
+      },
+      {
+        "name": "Bacon and Sausage Hot Filling",
+        "description": "Bacon and sausage with choice of bread",
+        "tags": ["hot_filling"],
+        "tier": 2
+      },
+      {
+        "name": "Bacon Sausage and Egg Hot Filling",
+        "description": "Bacon, sausage and egg with choice of bread",
+        "tags": ["hot_filling"],
+        "tier": 1
+      },
+      {
+        "name": "Bacon and Egg Hot Filling",
+        "description": "Bacon and egg with choice of bread",
+        "tags": ["hot_filling"],
+        "tier": 2
+      },
+      {
+        "name": "Bacon and Tomato Hot Filling",
+        "description": "Bacon and tomato with choice of bread",
+        "tags": ["hot_filling"],
+        "tier": 3
+      }
+    ],
+
+    "pork_comfort": [
+      {
+        "name": "Pulled Pork & Stuffing Cob",
+        "description": "Slow cooked pulled pork, stuffing, apple sauce & gravy",
+        "tags": ["comfort", "best_seller"],
+        "tier": 1
+      }
+    ],
+
+    "burgers": [
+      {
+        "name": "Cheese Burger",
+        "description": "Beef patty, cheese & bun",
+        "tags": ["burger"],
+        "tier": 2
+      },
+      {
+        "name": "Bacon Cheese Burger",
+        "description": "Beef patty, bacon, cheese & bun",
+        "tags": ["burger"],
+        "tier": 2
+      },
+      {
+        "name": "Chicken & Bacon Cheese Burger",
+        "description": "Chicken burger, bacon, cheese & bun",
+        "tags": ["burger"],
+        "tier": 2
+      }
+    ],
+
+    "smashed_burgers": [
+      {
+        "name": "Double Smash",
+        "description": "2 patties, American cheese, fries",
+        "tags": ["burger"],
+        "tier": 3
+      },
+      {
+        "name": "Triple Smash",
+        "description": "3 patties, American cheese, fries",
+        "tags": ["burger"],
+        "tier": 3
+      },
+      {
+        "name": "Dirty Smash",
+        "description": "2 patties, bacon, BBQ pulled pork, hash brown, cheese, crispy onions & fries",
+        "tags": ["best_seller", "premium"],
+        "tier": 1
+      },
+      {
+        "name": "Monster Mix",
+        "description": "2 patties, southern fried chicken, bacon, hash brown, cheese, crispy onions & fries",
+        "tags": ["best_seller", "premium"],
+        "tier": 1
+      }
+    ],
+
+    "chicken_burgers": [
+      {
+        "name": "The Classic",
+        "description": "Southern fried chicken burger & fries",
+        "tags": ["chicken_burger"],
+        "tier": 2
+      },
+      {
+        "name": "The Dirty Bird",
+        "description": "Southern fried chicken, smoked bacon, hash brown, cheese, crispy onions & fries",
+        "tags": ["best_seller", "chicken_burger"],
+        "tier": 1
+      },
+      {
+        "name": "The Chorizo Clucker",
+        "description": "Southern fried chicken, smoked bacon, chorizo, cheese, chilli jam & fries",
+        "tags": ["premium", "chicken_burger"],
+        "tier": 2
+      },
+      {
+        "name": "Sweet Southern Crunch",
+        "description": "2 southern fried chicken burgers, coleslaw, cheese & fries",
+        "tags": ["chicken_burger"],
+        "tier": 2
+      },
+      {
+        "name": "Bombay Chicken",
+        "description": "Southern fried chicken, tikka sauce, onion rings, mango chutney, mint yoghurt & fries",
+        "tags": ["premium", "chicken_burger"],
+        "tier": 2
+      },
+      {
+        "name": "Smokehouse Stack",
+        "description": "2 southern fried chicken burgers, smoked bacon, cheese, onion rings & fries",
+        "tags": ["premium"],
+        "tier": 2
+      },
+      {
+        "name": "Gravy Tower",
+        "description": "Southern fried chicken, hash brown, cheese, gravy & fries",
+        "tags": ["comfort"],
+        "tier": 2
+      }
+    ],
+
+    "hot_dogs": [
+      {
+        "name": "Classic Jumbo Hotdog",
+        "description": "Jumbo hotdog in brioche bun",
+        "tags": ["hot_dog"],
+        "tier": 3
+      },
+      {
+        "name": "Chilli Dog",
+        "description": "Jumbo hotdog, chilli con carne, cheese, sour cream & jalapeños in brioche bun",
+        "tags": ["premium", "hot_dog"],
+        "tier": 2
+      },
+      {
+        "name": "Dirty Dog",
+        "description": "Jumbo hotdog, nacho cheese, bacon bits, onion rings in brioche bun",
+        "tags": ["premium", "hot_dog"],
+        "tier": 2
+      }
+    ],
+
+    "munch_boxes": [
+      {
+        "name": "Munch Box For One",
+        "description": "Any burger, loaded fries, side & sauce",
+        "tags": ["bundle", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "Munch Box For Two",
+        "description": "Any 2 burgers, 2 loaded fries, 2 sides & 2 sauces",
+        "tags": ["bundle"],
+        "tier": 1
+      }
+    ],
+
+    "wraps": [
+      {
+        "name": "Dirty Wrap",
+        "description": "Southern fried chicken, hash browns, BBQ pulled pork & cheese",
+        "tags": ["wrap", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "Southern Fried Chicken & Chorizo Wrap",
+        "description": "Chicken strips, chorizo, smoked bacon, cheddar, salad & chilli jam",
+        "tags": ["wrap", "premium"],
+        "tier": 2
+      },
+      {
+        "name": "Southern Fried Chicken Wrap",
+        "description": "Southern fried chicken, cheese & fresh salad",
+        "tags": ["wrap"],
+        "tier": 2
+      },
+      {
+        "name": "Cajun Chicken Wrap",
+        "description": "Cajun chicken, cheese, coleslaw & salad",
+        "tags": ["wrap"],
+        "tier": 2
+      },
+      {
+        "name": "Chicken Tikka Wrap",
+        "description": "Chicken tikka, mango chutney, mint yoghurt & salad",
+        "tags": ["wrap", "best_seller"],
+        "tier": 2
+      }
+    ],
+
+    "flatbreads": [
+      {
+        "name": "Chicken Tikka Flatbread",
+        "description": "Chicken tikka, tikka sauce, onion rings, mint yoghurt, mango sauce & salad",
+        "tags": ["flatbread"],
+        "tier": 2
+      },
+      {
+        "name": "The Flatbread Stack",
+        "description": "Southern fried chicken, bacon bits, fries, cheese & salad",
+        "tags": ["premium"],
+        "tier": 2
+      }
+    ],
+
+    "panini_toasties": [
+      {
+        "name": "Ham and Cheese",
+        "description": "Ham & cheese panini or toastie",
+        "tags": ["toastie"],
+        "tier": 3
+      },
+      {
+        "name": "Tuna Melt",
+        "description": "Tuna & cheese toastie",
+        "tags": ["toastie"],
+        "tier": 3
+      },
+      {
+        "name": "BBQ Pulled Pork & Cheese",
+        "description": "Pulled pork & cheese toastie",
+        "tags": ["toastie", "best_seller"],
+        "tier": 2
+      },
+      {
+        "name": "Cajun Chicken, Rocket & Cheese",
+        "description": "Cajun chicken, rocket & cheese toastie",
+        "tags": ["toastie"],
+        "tier": 2
+      },
+      {
+        "name": "BBQ Southern Fried Chicken & Cheese",
+        "description": "Southern fried chicken, BBQ sauce & cheese toastie",
+        "tags": ["toastie", "premium"],
+        "tier": 2
+      }
+    ],
+
+    "jacket_potatoes": [
+      {
+        "name": "Cheese & Beans",
+        "description": "Baked potato with cheese & beans",
+        "tags": ["jacket"],
+        "tier": 3
+      },
+      {
+        "name": "Tuna Mayo",
+        "description": "Baked potato with tuna mayo",
+        "tags": ["jacket"],
+        "tier": 3
+      },
+      {
+        "name": "BBQ Pulled Pork & Cheese",
+        "description": "Baked potato with BBQ pulled pork & cheese",
+        "tags": ["jacket", "best_seller"],
+        "tier": 2
+      }
+    ],
+
+    "loaded_fries": [
+      {
+        "name": "Dirty Pork Fries",
+        "description": "Fries, BBQ pulled pork, nacho cheese, crispy onions, jalapeños",
+        "tags": ["loaded", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "Loaded Burger Fries",
+        "description": "Fries, beef burger pieces, bacon bits, onions, gherkins & nacho cheese",
+        "tags": ["loaded"],
+        "tier": 2
+      },
+      {
+        "name": "Classic Chilli Fries",
+        "description": "Fries, chilli con carne, cheese, jalapeños & sour cream",
+        "tags": ["loaded"],
+        "tier": 2
+      },
+      {
+        "name": "Bombay Fries",
+        "description": "Chicken, tikka sauce, mango, mint yoghurt, crispy onions & fries",
+        "tags": ["loaded"],
+        "tier": 2
+      }
+    ],
+
+    "chips": [
+      {
+        "name": "Chips",
+        "description": "Fresh golden fries",
+        "tags": ["chips"],
+        "tier": 3
+      },
+      {
+        "name": "Cheesy Chips",
+        "description": "Fries topped with melted cheese",
+        "tags": ["chips"],
+        "tier": 3
+      },
+      {
+        "name": "Chips & Gravy",
+        "description": "Fries with rich gravy",
+        "tags": ["chips"],
+        "tier": 3
+      },
+      {
+        "name": "Chips & Curry Sauce",
+        "description": "Fries with curry sauce",
+        "tags": ["chips"],
+        "tier": 3
+      }
+    ],
+
+    "sides": [
+      { "name": "Onion Rings", "description": "Crispy onion rings", "tags": ["side"], "tier": 3 },
+      { "name": "Chicken Poppers", "description": "Bite-sized chicken pieces", "tags": ["side"], "tier": 2 },
+      { "name": "Mozzarella Dippers", "description": "Cheese sticks", "tags": ["side"], "tier": 3 },
+      { "name": "Mac & Cheese Bites", "description": "Crispy mac & cheese bites", "tags": ["side"], "tier": 3 },
+      { "name": "Jalapeño Bites", "description": "Cheese filled jalapeños", "tags": ["side"], "tier": 3 },
+      { "name": "Coleslaw", "description": "Creamy coleslaw", "tags": ["side"], "tier": 3 }
+    ],
+
+    "specials": [
+      {
+        "name": "The Best Baguette (Special)",
+        "description": "2 bacon, 2 sausage, 2 eggs, tomatoes or beans in a fresh baguette",
+        "tags": ["special", "breakfast"],
+        "tier": 1
+      },
+      {
+        "name": "Fully Loaded Baguette (Special)",
+        "description": "2 bacon, 2 sausage, 2 eggs, black pudding, mushroom, onions & cheese in a baguette",
+        "tags": ["special", "breakfast"],
+        "tier": 1
+      },
+      {
+        "name": "Triple Decker Toastie",
+        "description": "2 bacon, 2 sausage, 2 eggs, cheese & hash brown",
+        "tags": ["special", "breakfast"],
+        "tier": 1
+      },
+      {
+        "name": "Monster Mix (Special)",
+        "description": "2 beef patties, southern fried chicken, smoked bacon, hash brown, cheese, crispy onions & fries",
+        "tags": ["special", "best_seller"],
+        "tier": 1
+      },
+      {
+        "name": "Smokehouse Stack (Special)",
+        "description": "2 southern fried chicken burgers, smoked bacon, cheese, onion rings & fries",
+        "tags": ["special"],
+        "tier": 2
+      },
+      {
+        "name": "Pulled Pork & Stuffing Meal",
+        "description": "Slow cooked pulled pork, stuffing, apple sauce & gravy",
+        "tags": ["special", "comfort"],
+        "tier": 1
+      }
+    ],
+
+    "meal_deals": [
+      {
+        "name": "Cheeseburger Meal Deal",
+        "description": "Cheeseburger, fries & drink",
+        "tags": ["meal_deal"],
+        "tier": 2
+      },
+      {
+        "name": "Southern Fried Chicken Burger Meal Deal",
+        "description": "Southern fried chicken burger, fries & drink",
+        "tags": ["meal_deal"],
+        "tier": 2
+      },
+      {
+        "name": "Wrap Meal Deal",
+        "description": "Choice of wrap, fries & drink",
+        "tags": ["meal_deal"],
+        "tier": 2
+      }
+    ],
+
+    "cold_sandwiches": [
+      {
+        "name": "Ham, Cheese & Pickle Cob",
+        "description": "Ham, cheese & pickle in a fresh cob",
+        "tags": ["cold_sandwich"],
+        "tier": 3
+      },
+      {
+        "name": "Ham & Cheese Cob",
+        "description": "Ham & cheese cob",
+        "tags": ["cold_sandwich"],
+        "tier": 3
+      },
+      {
+        "name": "Ham Salad Cob",
+        "description": "Ham with fresh salad in a cob",
+        "tags": ["cold_sandwich"],
+        "tier": 3
+      },
+      {
+        "name": "Cheese Salad Cob",
+        "description": "Cheese with fresh salad in a cob",
+        "tags": ["cold_sandwich"],
+        "tier": 3
+      },
+      {
+        "name": "Tuna Mayo Cob",
+        "description": "Tuna mayo in a fresh cob",
+        "tags": ["cold_sandwich"],
+        "tier": 3
+      },
+      {
+        "name": "Cajun Chicken & Salad Cob",
+        "description": "Cajun chicken with fresh salad in a cob",
+        "tags": ["cold_sandwich"],
+        "tier": 2
+      },
+      {
+        "name": "Tuna Mix Cob",
+        "description": "Tuna, mayo, cheese & red onion in a cob",
+        "tags": ["cold_sandwich"],
+        "tier": 3
+      }
+    ],
+
+    "fresh_salad_boxes": [
+      {
+        "name": "Southern Fried Chicken Salad Box",
+        "description": "Southern fried chicken with fresh salad",
+        "tags": ["salad"],
+        "tier": 2
+      },
+      {
+        "name": "Cajun Chicken Salad Box",
+        "description": "Cajun chicken with fresh salad",
+        "tags": ["salad"],
+        "tier": 2
+      },
+      {
+        "name": "Ham Salad Box",
+        "description": "Ham with fresh salad",
+        "tags": ["salad"],
+        "tier": 3
+      },
+      {
+        "name": "Tuna Mayo Salad Box",
+        "description": "Tuna mayo with fresh salad",
+        "tags": ["salad"],
+        "tier": 3
+      }
+    ],
+
+    "offer_items": [
+      {
+        "name": "Tuesday Discount",
+        "description": "20% off Just Eat orders every Tuesday",
+        "tags": ["offer"],
+        "tier": 1
+      },
+      {
+        "name": "Loyalty Stamp Card",
+        "description": "£10 off every 6th order with stamp card",
+        "tags": ["offer"],
+        "tier": 1
+      }
+    ],
+
+    "drinks": [
+      {
+        "name": "Soft Drink (Generic)",
+        "description": "Chilled bottled drink",
+        "tags": ["drink"],
+        "tier": 3
+      }
+    ]
+  }
+}
