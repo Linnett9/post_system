@@ -19,12 +19,15 @@ class PostOrchestrator:
 
     @staticmethod
     def _clean_post_content(content: str) -> str:
-        cleaned = content.strip()
+        cleaned = content.replace("*", "").strip()
 
-        while len(cleaned) >= 2 and cleaned[0] in WRAPPING_QUOTES and cleaned[-1] in WRAPPING_QUOTES:
-            cleaned = cleaned[1:-1].strip()
+        while cleaned and cleaned[0] in WRAPPING_QUOTES:
+            cleaned = cleaned[1:].strip()
 
-        return cleaned.replace("*", "").strip()
+        while cleaned and cleaned[-1] in WRAPPING_QUOTES:
+            cleaned = cleaned[:-1].strip()
+
+        return cleaned
 
     # -----------------------------------
     # SINGLE POST (existing behaviour)
