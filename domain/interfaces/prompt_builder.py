@@ -117,10 +117,11 @@ You MUST:
 - NEVER hallucinate missing business data
 - Keep under 150 words
 - End with a clear CTA
+- Do NOT use Markdown formatting, including **bold**, asterisks, headings, bullets, or numbered lists
 
 Tone:
 - casual
-- slightly bold
+- confident
 - appetite-driven
 - not corporate
 

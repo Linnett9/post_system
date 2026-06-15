@@ -14,6 +14,10 @@ class PostOrchestrator:
         self.llm_client = llm_client
         self.prompt_builder = prompt_builder
 
+    @staticmethod
+    def _clean_post_content(content: str) -> str:
+        return content.replace("****", "").replace("**", "").strip()
+
     # -----------------------------------
     # SINGLE POST (existing behaviour)
     # -----------------------------------
@@ -29,6 +33,8 @@ class PostOrchestrator:
             content = self.llm_client.generate(prompt)
         else:
             content = f"[MOCK POST]\n{brief.item['name']} - {brief.intent}"
+
+        content = self._clean_post_content(content)
 
         return {
             "title": brief.item["name"],
@@ -54,6 +60,8 @@ class PostOrchestrator:
                 content = self.llm_client.generate(prompt)
             else:
                 content = f"[MOCK POST]\n{brief.item['name']} - {brief.intent}"
+
+            content = self._clean_post_content(content)
 
             posts.append({
                 "title": brief.item["name"],

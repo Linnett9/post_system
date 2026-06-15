@@ -1,17 +1,11 @@
 import os
 import json
-import time
-from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
 from infrastructure.llm.openrouter_client import OpenRouterClient
 from application.post_orchestrator import PostOrchestrator
 from domain.interfaces.prompt_builder import PromptBuilder
 from infrastructure.messaging.telegram_notifier import TelegramNotifier
-
-
-TARGET_HOUR = 8
-TARGET_MINUTE = 0
 
 
 # ----------------------------
@@ -75,66 +69,26 @@ def build_system():
 
 
 # ----------------------------
-# NEXT RUN CALCULATOR
-# ----------------------------
-def get_next_run_time():
-    now = datetime.now()
-
-    next_run = now.replace(
-        hour=TARGET_HOUR,
-        minute=TARGET_MINUTE,
-        second=0,
-        microsecond=0
-    )
-
-    # if 8am already passed today → schedule tomorrow
-    if next_run <= now:
-        next_run += timedelta(days=1)
-
-    return next_run
-
-
-# ----------------------------
-# MAIN LOOP (ZERO POLLING)
+# MAIN JOB
 # ----------------------------
 def run():
     orchestrator, telegram = build_system()
 
-    print("\n🚀 Smart scheduler started (sleep-to-8am mode)\n")
+    print("\n==============================")
+    print("Generating daily ads")
+    print("==============================\n")
 
-    while True:
-        try:
-            now = datetime.now()
-            next_run = get_next_run_time()
+    results = orchestrator.generate_posts(3)
 
-            sleep_seconds = (next_run - now).total_seconds()
+    for i, result in enumerate(results, 1):
+        ad = result.get("content", "[NO CONTENT]")
 
-            print(f"🕒 Now: {now}")
-            print(f"⏳ Next run: {next_run}")
-            print(f"💤 Sleeping for {int(sleep_seconds)} seconds...\n")
+        print(f"\n--- AD {i} ---\n")
+        print(ad)
 
-            time.sleep(max(sleep_seconds, 0))
+        telegram.send_message(ad)
 
-            # ----------------------------
-            # RUN DAILY JOB
-            # ----------------------------
-            print("\n==============================")
-            print("🌅 8AM RUN TRIGGERED")
-            print("==============================\n")
-
-            results = orchestrator.generate_posts(3)
-
-            for i, result in enumerate(results, 1):
-                ad = result.get("content", "[NO CONTENT]")
-
-                print(f"\n--- AD {i} ---\n")
-                print(ad)
-
-                telegram.send_message(ad)
-
-        except Exception as e:
-            print(f"❌ Scheduler error: {e}")
-            time.sleep(60)  # safety fallback
+    print("\nDone. Sent 3 ads to Telegram.\n")
 
 
 if __name__ == "__main__":
