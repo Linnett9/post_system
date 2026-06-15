@@ -4,6 +4,9 @@ from application.offer_selector import OfferSelector
 from application.context_builder import ContextBuilder
 
 
+WRAPPING_QUOTES = ('"', "'", "\u201c", "\u201d", "\u2018", "\u2019")
+
+
 class PostOrchestrator:
     def __init__(self, menu_data, business_data, llm_client=None, prompt_builder=None):
         self.intent_engine = IntentEngine()
@@ -16,7 +19,12 @@ class PostOrchestrator:
 
     @staticmethod
     def _clean_post_content(content: str) -> str:
-        return content.replace("****", "").replace("**", "").strip()
+        cleaned = content.strip()
+
+        while len(cleaned) >= 2 and cleaned[0] in WRAPPING_QUOTES and cleaned[-1] in WRAPPING_QUOTES:
+            cleaned = cleaned[1:-1].strip()
+
+        return cleaned.replace("*", "").strip()
 
     # -----------------------------------
     # SINGLE POST (existing behaviour)

@@ -118,6 +118,7 @@ You MUST:
 - Keep under 150 words
 - End with a clear CTA
 - Do NOT use Markdown formatting, including **bold**, asterisks, headings, bullets, or numbered lists
+- Do NOT wrap the post in quotation marks
 
 Tone:
 - casual
