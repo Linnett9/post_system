@@ -2,8 +2,9 @@ name: Daily Ads
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. 7:00 UTC is 8:00 UK time during BST.
-    - cron: "0 7 * * *"
+    # GitHub Actions schedules are best-effort; start three hours early to
+    # accommodate the observed delay before the job begins.
+    - cron: "0 4 * * *"
   workflow_dispatch:
 
 jobs:
