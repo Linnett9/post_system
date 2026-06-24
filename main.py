@@ -15,7 +15,7 @@ from infrastructure.messaging.telegram_notifier import TelegramNotifier
 # ----------------------------
 def load_settings(path="settings.yaml"):
     with open(path, "r") as f:
-        return yaml.safe_load(f)
+        return yaml.safe_load(f) or {}
 
 
 # ----------------------------
@@ -28,7 +28,7 @@ def build_llm(settings):
 
     llm_settings = settings.get("llm", {})
     provider = llm_settings.get("provider", "openrouter")
-    model = llm_settings.get("model", "deepseek/deepseek-chat")
+    model = llm_settings.get("model", "openrouter/auto")
 
     if provider != "openrouter":
         raise ValueError(f"Unsupported LLM provider: {provider}")
