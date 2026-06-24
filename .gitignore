@@ -1,4 +1,19 @@
 .env
 __pycache__/
 *.pyc
+item_history.json.env
+
+# Secrets
+.env
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Runtime state
 item_history.json

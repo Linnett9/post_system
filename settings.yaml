@@ -1,0 +1,3 @@
+llm:
+  provider: openrouter
+  model: deepseek/deepseek-chat

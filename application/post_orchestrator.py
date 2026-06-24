@@ -2,9 +2,7 @@ from application.intent_engine import IntentEngine
 from application.menu_selector import MenuSelector
 from application.offer_selector import OfferSelector
 from application.context_builder import ContextBuilder
-
-
-WRAPPING_QUOTES = ('"', "'", "\u201c", "\u201d", "\u2018", "\u2019")
+from application.post_cleaner import clean_post_content
 
 
 class PostOrchestrator:
@@ -19,15 +17,7 @@ class PostOrchestrator:
 
     @staticmethod
     def _clean_post_content(content: str) -> str:
-        cleaned = content.replace("*", "").strip()
-
-        while cleaned and cleaned[0] in WRAPPING_QUOTES:
-            cleaned = cleaned[1:].strip()
-
-        while cleaned and cleaned[-1] in WRAPPING_QUOTES:
-            cleaned = cleaned[:-1].strip()
-
-        return cleaned
+        return clean_post_content(content)
 
     # -----------------------------------
     # SINGLE POST (existing behaviour)

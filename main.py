@@ -1,24 +1,41 @@
 import os
 import json
+import yaml
 from dotenv import load_dotenv
 
 from infrastructure.llm.openrouter_client import OpenRouterClient
+from application.post_cleaner import clean_post_content
 from application.post_orchestrator import PostOrchestrator
 from domain.interfaces.prompt_builder import PromptBuilder
 from infrastructure.messaging.telegram_notifier import TelegramNotifier
 
 
 # ----------------------------
-# BUILD SYSTEM (same as before)
+# CONFIG
 # ----------------------------
-def build_llm():
+def load_settings(path="settings.yaml"):
+    with open(path, "r") as f:
+        return yaml.safe_load(f)
+
+
+# ----------------------------
+# BUILD SYSTEM
+# ----------------------------
+def build_llm(settings):
     api_key = os.getenv("OPENROUTER_API_KEY")
     if not api_key:
         raise ValueError("Missing OPENROUTER_API_KEY")
 
+    llm_settings = settings.get("llm", {})
+    provider = llm_settings.get("provider", "openrouter")
+    model = llm_settings.get("model", "deepseek/deepseek-chat")
+
+    if provider != "openrouter":
+        raise ValueError(f"Unsupported LLM provider: {provider}")
+
     return OpenRouterClient(
         api_key=api_key,
-        model="deepseek/deepseek-chat"
+        model=model
     )
 
 
@@ -38,7 +55,9 @@ def build_telegram():
 def build_system():
     load_dotenv()
 
-    llm = build_llm()
+    settings = load_settings()
+
+    llm = build_llm(settings)
     telegram = build_telegram()
     prompt_builder = PromptBuilder()
 
@@ -81,7 +100,7 @@ def run():
     results = orchestrator.generate_posts(3)
 
     for i, result in enumerate(results, 1):
-        ad = result.get("content", "[NO CONTENT]")
+        ad = clean_post_content(result.get("content", "[NO CONTENT]"))
 
         print(f"\n--- AD {i} ---\n")
         print(ad)
